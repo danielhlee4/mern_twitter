@@ -6,8 +6,11 @@ const logger = require('morgan');
 const debug = require('debug');
 
 const cors = require('cors');
-const csurf = require('csurf');
+const csurf = require('csurf')
+
 const { isProduction } = require('./config/keys');
+
+require('./models/User');
 
 const usersRouter = require('./routes/api/users');
 const tweetsRouter = require('./routes/api/tweets');
